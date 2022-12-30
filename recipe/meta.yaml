@@ -24,6 +24,7 @@ requirements:
     - hatchling >=1.7.1
     - mypy >=0.971,<1.dev0
     - mypyc
+    - packaging !=22.0
     - pathspec
     - python >=3.7
     - setuptools
