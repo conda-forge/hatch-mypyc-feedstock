@@ -17,11 +17,11 @@ build:
 
 requirements:
   host:
-    - hatchling >=1.7.1
+    - hatchling >=1.12.2
     - pip
     - python >=3.7
   run:
-    - hatchling >=1.7.1
+    - hatchling >=1.12.2
     - mypy >=0.971,<1.dev0
     - mypyc
     - packaging !=22.0
