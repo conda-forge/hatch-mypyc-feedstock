@@ -1,4 +1,4 @@
-{% set version = "0.14.1" %}
+{% set version = "0.15.0" %}
 
 package:
   name: hatch-mypyc
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/h/hatch-mypyc/hatch_mypyc-{{ version }}.tar.gz
-  sha256: 8ca59b4c6c7391711fa5d3bfc92c922bff015138fabe6ddf48d483e6ba2900f2
+  sha256: bda7c00b859ea163ce7a2f4f4ffe37c0932b28a4bf19806f40000678f9598eda
   patches:
     - 0000-test-as-installed.patch
 
@@ -17,11 +17,11 @@ build:
 
 requirements:
   host:
-    - hatchling >=1.7.1
+    - hatchling >=1.12.2
     - pip
     - python >=3.7
   run:
-    - hatchling >=1.7.1
+    - hatchling >=1.12.2
     - mypy >=0.971,<1.dev0
     - mypyc
     - packaging !=22.0
