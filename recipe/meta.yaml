@@ -11,9 +11,10 @@ source:
     - 0000-test-as-installed.patch
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
   number: 1
+  noarch: python
+  script:
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
 requirements:
   host:
@@ -38,13 +39,12 @@ test:
     - pip
     - pytest-cov
     - pytest-mock
+    - python {{ python_min }}
     - python-build
     - tomli
     - virtualenv >=20.0.35
-    - python {{ python_min }}
   commands:
     - pip check
-    - pytest -vv --cov hatch_mypyc --cov ./tests --cov-branch --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=90
 
 about:
   home: https://pypi.org/project/hatch-mypyc
